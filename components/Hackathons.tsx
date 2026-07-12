@@ -1,29 +1,21 @@
 import { hackathons } from '@/data/resume'
+import BulletList from '@/components/BulletList'
 
 export default function Hackathons() {
   return (
-    <section id="hackathons" className="max-w-4xl mx-auto px-6 py-16">
-      <h2 className="text-2xl font-bold mb-10">Hackathons</h2>
+    <section id="hackathons" className="max-w-4xl mx-auto px-6 py-12">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">Hackathons</h2>
       <div className="space-y-8">
         {hackathons.map((item) => (
-          <div key={item.name} className="border-l-2 border-indigo-500 dark:border-indigo-400 pl-6">
-            <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-              <h3 className="text-lg font-semibold">{item.name}</h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{item.period}</span>
+          <div key={item.name}>
+            <div className="grid grid-cols-[1fr_auto] gap-x-4 items-baseline">
+              <h3 className="text-base font-semibold text-gray-900 dark:text-white">{item.name}</h3>
+              <span className="text-sm text-gray-400 dark:text-gray-500 whitespace-nowrap">{item.period}</span>
             </div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
-                {item.result}
-              </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400">· {item.location}</span>
-            </div>
-            <ul className="space-y-2">
-              {item.bullets.map((bullet, i) => (
-                <li key={i} className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                  • {bullet}
-                </li>
-              ))}
-            </ul>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+              {item.result} · {item.location}
+            </p>
+            <BulletList bullets={item.bullets} />
           </div>
         ))}
       </div>

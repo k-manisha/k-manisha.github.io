@@ -9,11 +9,15 @@ export const hero = {
   },
 }
 
+export const about =
+  'Frontend engineer with 7 years of experience building enterprise web applications at SAP, Chargebee, and TCS. I specialise in React, TypeScript, and micro-frontend architecture — owning end-to-end frontend delivery as the sole engineer on every team I have been part of. Currently expanding into fullstack development and AI engineering, building toward roles where I can own the full product stack.'
+
 export type ExperienceItem = {
   company: string
   title: string
   period: string
   location: string
+  summary: string
   bullets: string[]
 }
 
@@ -21,8 +25,9 @@ export const experience: ExperienceItem[] = [
   {
     company: 'SAP Labs',
     title: 'Developer',
-    period: 'October 2023 – present',
+    period: 'Oct 2023 – present',
     location: 'Bangalore, India',
+    summary: 'As the sole frontend engineer in a cross-functional team, I own the architecture and end-to-end delivery of enterprise React applications. I architect React-based micro-frontends, drive cross-team integrations, and define frontend architecture, API contracts, and engineering standards. I also mentor junior engineers, champion code quality through testing and reviews, and leverage AI-assisted development to accelerate modernization.',
     bullets: [
       'Sole frontend engineer on a cross-functional team of 8, owning frontend implementation and end-to-end delivery across two enterprise product UIs.',
       'Architected Dictionary as a Micro-Frontend (Module Federation) within Collaboration Hub, delivering a unified read/explore experience with tree-structured analytical table views using UI5 Web Components and React.',
@@ -37,8 +42,9 @@ export const experience: ExperienceItem[] = [
   {
     company: 'Great Software Laboratory',
     title: 'Software Engineer',
-    period: 'August 2021 – October 2023',
+    period: 'Aug 2021 – Oct 2023',
     location: 'Remote',
+    summary: 'As the sole frontend engineer on the Chargebee Integrations team, I owned end-to-end UI delivery for multiple third-party integrations using Vue.js. Built scalable integration experiences, decoupled frontend deployments from backend releases, and developed reusable search and filtering components. Collaborated on API design, led UI rebranding efforts, and mentored a junior engineer while driving frontend architecture and delivery decisions independently.',
     bullets: [
       'Sole frontend engineer on the Chargebee Integrations team, owning end-to-end UI delivery for 4 third-party integrations — HubSpot, NetSuite, Intacct, and Xero — from Figma to production in Vue.js.',
       'Decoupled frontend from backend delivery across all integrations, enabling independent frontend deployment and eliminating UI bundling from backend builds.',
@@ -50,8 +56,9 @@ export const experience: ExperienceItem[] = [
   {
     company: 'Tata Consultancy Services',
     title: 'Systems Engineer',
-    period: 'June 2019 – August 2021',
+    period: 'Jun 2019 – Aug 2021',
     location: 'Pune, India',
+    summary: 'Built reusable Angular component libraries and composable widgets that reduced application-level boilerplate across projects. Independently led the Angular v8→v9 migration while contributing to Spring Boot backend services and automated testing. As the primary frontend engineer, collaborated closely with stakeholders, regularly demoing features and delivering scalable solutions for enterprise applications.',
     bullets: [
       'Built a reusable Angular widget library (MediaList, TileViewer, Data Grid, Filter with Redux, CDK Scroll) and composable experience widgets (Dependent Forms, multi-step flows) designed for org-wide reuse, enabling near-zero app-level boilerplate.',
       'Led Angular v8→v9 migration independently; contributed REST controllers, service interfaces, and DTOs in Spring Boot, with JUnit tests for backend and Jest tests for frontend as part of standard widget delivery.',
@@ -92,9 +99,8 @@ export const hackathons: HackathonItem[] = [
     location: 'Berlin, Germany',
     period: 'Sep 29 – Oct 1, 2025',
     bullets: [
-      'Won Topic Winner in the AI-Powered Technical Debt Solver challenge.',
-      'Built Documate: AI-powered solution for automated technical documentation generation.',
-      'Rapidly prototyped and demonstrated the solution using AI-assisted development tools.',
+      'Topic Winner — AI-Powered Technical Debt Solver challenge.',
+      'Built Documate: AI-powered automated technical documentation generation.',
     ],
   },
   {
@@ -103,9 +109,8 @@ export const hackathons: HackathonItem[] = [
     location: 'Goa, India',
     period: 'Apr 13–16, 2026',
     bullets: [
-      "Selected via manager nomination for SAP's AI Innovation Camp and Hackathon.",
-      'Built frontend and backend components for an AI-driven Jira-to-PR automation workflow.',
-      'Utilised Claude and MCP integrations to streamline requirement analysis and code generation.',
+      'Selected via manager nomination.',
+      'Built a Jira-to-PR automation workflow using Claude and MCP integrations.',
     ],
   },
 ]
@@ -123,11 +128,10 @@ export const projects: ProjectItem[] = [
   {
     name: 'Cleanup Agent',
     note: 'SAP internal project',
-    description: 'AI-powered dictionary discovery and cleanup agent',
+    description: 'AI-powered dictionary discovery and cleanup agent built with PydanticAI',
     bullets: [
-      'Built with PydanticAI, integrating dictionary APIs to accelerate onboarding.',
-      'Enables users to explore metadata, understand hierarchical relationships, and identify unused entries.',
-      'Validates cleanup recommendations through dry-run execution before applying changes.',
+      'Integrates dictionary APIs to explore metadata and understand hierarchical relationships.',
+      'Identifies unused entries and validates cleanup recommendations via dry-run before applying.',
     ],
   },
 ]
