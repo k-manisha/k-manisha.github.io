@@ -1,9 +1,10 @@
 import { experience } from '@/data/resume'
+import Section from '@/components/Section'
 import TimelineItem from '@/components/TimelineItem'
 
 export default function Experience() {
   return (
-    <section id="experience" className="max-w-4xl mx-auto px-6 py-12">
+    <Section id="experience">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">Experience</h2>
       <div className="space-y-10">
         {experience.map((item) => (
@@ -17,6 +18,6 @@ export default function Experience() {
           />
         ))}
       </div>
-    </section>
+    </Section>
   )
 }

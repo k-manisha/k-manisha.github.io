@@ -1,9 +1,10 @@
 import { hackathons } from '@/data/resume'
+import Section from '@/components/Section'
 import BulletList from '@/components/BulletList'
 
 export default function Hackathons() {
   return (
-    <section id="hackathons" className="max-w-4xl mx-auto px-6 py-12">
+    <Section id="hackathons">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">Hackathons</h2>
       <div className="space-y-8">
         {hackathons.map((item) => (
@@ -19,6 +20,6 @@ export default function Hackathons() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   )
 }

@@ -1,11 +1,12 @@
 import { projects } from '@/data/resume'
 import { ExternalLink } from 'lucide-react'
 import { GitHubIcon } from '@/components/icons'
+import Section from '@/components/Section'
 import BulletList from '@/components/BulletList'
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-4xl mx-auto px-6 py-12">
+    <Section id="projects">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">Projects</h2>
       <div className="space-y-8">
         {projects.map((project) => (
@@ -20,24 +21,14 @@ export default function Projects() {
               </div>
               <div className="flex items-center gap-3 shrink-0 mt-0.5">
                 {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                    aria-label="GitHub"
-                  >
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="GitHub">
                     <GitHubIcon size={15} />
                   </a>
                 )}
                 {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                    aria-label="Live demo"
-                  >
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Live demo">
                     <ExternalLink size={15} />
                   </a>
                 )}
@@ -47,6 +38,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   )
 }

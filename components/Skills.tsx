@@ -1,8 +1,9 @@
 import { skills } from '@/data/resume'
+import Section from '@/components/Section'
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-4xl mx-auto px-6 py-12">
+    <Section id="skills">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-8">Skills</h2>
       <div className="space-y-3">
         {skills.map((group) => (
@@ -16,6 +17,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   )
 }
