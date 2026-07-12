@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="max-w-4xl mx-auto px-6 py-16">
+    <section className="max-w-2xl mx-auto px-6 py-16">
       <h1 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
         {hero.name}
       </h1>
