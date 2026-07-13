@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 dark:border-gray-800/60 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-sm">
-      <div className="max-w-2xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
         <span className="text-sm font-semibold text-gray-900 dark:text-white">MK</span>
 
         {/* Desktop nav */}
@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div className="sm:hidden border-t border-gray-100 dark:border-gray-800/60 bg-white/95 dark:bg-[#0a0a0a]/95">
-          <div className="max-w-2xl mx-auto px-6 py-3 flex flex-col gap-3">
+          <div className="max-w-3xl mx-auto px-6 py-3 flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}

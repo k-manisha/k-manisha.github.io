@@ -9,12 +9,12 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-3xl mx-auto bg-white dark:bg-[#0a0a0a] min-h-screen shadow-sm">
       <Navbar />
       <Hero />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Hackathons />
       <Projects />
       <Footer />

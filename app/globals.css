@@ -5,15 +5,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gutter: #f3f4f6;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --gutter: #111111;
 }
 
 body {
-  background: var(--background);
+  background: var(--gutter);
   color: var(--foreground);
 }
 
