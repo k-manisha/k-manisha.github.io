@@ -19,6 +19,7 @@ export type ExperienceItem = {
   location: string;
   summary: string;
   bullets: string[];
+  tech: string[];
 };
 
 export const experience: ExperienceItem[] = [
@@ -39,6 +40,7 @@ export const experience: ExperienceItem[] = [
       "Broke down and analysed frontend stories each release cycle, defining API contracts as the sole frontend decision-maker; conducted ~5 frontend code reviews per sprint within the team.",
       "Guided 3 junior engineers on React architecture, component design, and frontend best practices.",
     ],
+    tech: ["React", "TypeScript", "Module Federation", "React Query", "Zustand", "Vitest", "ESLint", "UI5 Web Components"],
   },
   {
     company: "Great Software Laboratory",
@@ -54,6 +56,7 @@ export const experience: ExperienceItem[] = [
       "Contributed UI fields for multi-entity support and led frontend rebranding (iconography and color system) across integrations, mentoring a junior engineer through the process.",
       "Operated as the sole frontend decision-maker on the team, reaching across to a senior frontend engineer in another team for architectural review when needed.",
     ],
+    tech: ["Vue.js", "JavaScript", "VueX", "REST APIs", "Webpack", "SCSS"],
   },
   {
     company: "Tata Consultancy Services",
@@ -67,30 +70,26 @@ export const experience: ExperienceItem[] = [
       "Led Angular v8→v9 migration independently; contributed REST controllers, service interfaces, and DTOs in Spring Boot, with JUnit tests for backend and Jest tests for frontend as part of standard widget delivery.",
       "Operated as primary frontend contributor on a team of 10, regularly demoing work to stakeholders.",
     ],
+    tech: ["Angular", "TypeScript", "Spring Boot", "Jest", "Redux", "Java"],
   },
 ];
 
-export type SkillGroup = {
+export type SkillCategory = {
   label: string;
+  icon: string;
   values: string[];
 };
 
-export const skills: SkillGroup[] = [
-  { label: "Languages", values: ["TypeScript", "JavaScript", "Java"] },
-  { label: "Frontend", values: ["React", "Vue.js", "Angular", "Next.js"] },
-  { label: "Styling", values: ["CSS", "SCSS", "UI5 Web Components"] },
-  { label: "State", values: ["Zustand", "React Query", "VueX"] },
-  {
-    label: "Architecture",
-    values: ["Micro-Frontends (Module Federation)", "Component Libraries"],
-  },
-  { label: "Testing", values: ["Vitest", "Jest", "React Testing Library"] },
-  { label: "Tooling", values: ["ESLint", "Webpack", "Git"] },
-  { label: "Backend", values: ["Spring Boot", "REST APIs"] },
-  {
-    label: "AI Tooling",
-    values: ["Claude Code", "MCP", "Agents", "AI-assisted development"],
-  },
+export const skills: SkillCategory[] = [
+  { icon: "⌨️", label: "Languages", values: ["TypeScript", "JavaScript", "Java"] },
+  { icon: "🖥️", label: "Frontend", values: ["React", "Vue.js", "Angular", "Next.js"] },
+  { icon: "🎨", label: "Styling", values: ["CSS", "SCSS", "UI5 Web Components"] },
+  { icon: "🔄", label: "State", values: ["Zustand", "React Query", "VueX"] },
+  { icon: "🧱", label: "Architecture", values: ["Module Federation", "Component Libraries", "Micro-Frontends"] },
+  { icon: "🧪", label: "Testing", values: ["Vitest", "Jest", "React Testing Library"] },
+  { icon: "🔧", label: "Tooling", values: ["ESLint", "Webpack", "Git"] },
+  { icon: "⚙️", label: "Backend", values: ["Spring Boot", "REST APIs"] },
+  { icon: "🤖", label: "AI", values: ["Claude Code", "MCP", "Agents", "AI-assisted dev"] },
 ];
 
 export type HackathonItem = {

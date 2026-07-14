@@ -15,6 +15,7 @@ export default function Experience() {
             meta={item.location}
             period={item.period}
             summary={item.summary}
+            tech={item.tech}
           />
         ))}
       </div>
