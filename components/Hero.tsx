@@ -30,28 +30,20 @@ export default async function Hero() {
         </p>
         <p className="text-sm text-gray-400 dark:text-gray-500 mb-8">{hero.subline}</p>
         <div className="flex items-center gap-5">
-          <a
-            href={hero.links.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <LinkedInIcon size={15} /> LinkedIn
-          </a>
-          <a
-            href={hero.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <GitHubIcon size={15} /> GitHub
-          </a>
-          <a
-            href={`mailto:${hero.links.email}`}
-            className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <Mail size={15} /> Email
-          </a>
+          {[
+            { href: hero.links.linkedin, icon: <LinkedInIcon size={15} />, label: 'LinkedIn', external: true },
+            { href: hero.links.github, icon: <GitHubIcon size={15} />, label: 'GitHub', external: true },
+            { href: `mailto:${hero.links.email}`, icon: <Mail size={15} />, label: 'Email', external: false },
+          ].map(({ href, icon, label, external }) => (
+            <a
+              key={label}
+              href={href}
+              {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white px-2.5 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-150 hover:shadow-sm relative hover:z-10"
+            >
+              {icon} {label}
+            </a>
+          ))}
         </div>
       </div>
 

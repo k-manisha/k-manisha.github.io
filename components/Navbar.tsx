@@ -24,12 +24,12 @@ export default function Navbar() {
         <span className="text-sm font-semibold text-gray-900 dark:text-white">MK</span>
 
         {/* Desktop nav */}
-        <div className="hidden sm:flex items-center gap-6">
+        <div className="hidden sm:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white px-3 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-150 hover:shadow-sm relative hover:z-10"
             >
               {link.label}
             </a>
