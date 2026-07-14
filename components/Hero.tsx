@@ -1,23 +1,23 @@
-import Image from 'next/image'
-import { hero } from '@/data/resume'
-import { GitHubIcon, LinkedInIcon } from '@/components/icons'
-import { Mail } from 'lucide-react'
+import Image from "next/image";
+import { hero } from "@/data/resume";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { Mail } from "lucide-react";
 
 async function getGitHubAvatar(): Promise<string | null> {
   try {
-    const res = await fetch('https://api.github.com/users/k-manisha', {
+    const res = await fetch("https://api.github.com/users/k-manisha", {
       next: { revalidate: 0 },
-    })
-    if (!res.ok) return null
-    const data = await res.json()
-    return data.avatar_url ?? null
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.avatar_url ?? null;
   } catch {
-    return null
+    return null;
   }
 }
 
 export default async function Hero() {
-  const avatarUrl = await getGitHubAvatar()
+  const avatarUrl = await getGitHubAvatar();
 
   return (
     <section className="max-w-2xl mx-auto px-6 pt-14 pb-8 flex flex-row items-center justify-between gap-12">
@@ -28,17 +28,36 @@ export default async function Hero() {
         <p className="text-lg text-gray-600 dark:text-gray-400 font-normal mb-1">
           {hero.tagline}
         </p>
-        <p className="text-sm text-gray-400 dark:text-gray-500 mb-8">{hero.subline}</p>
+        <p className="text-sm text-gray-400 dark:text-gray-500 mb-8">
+          {hero.subline}
+        </p>
         <div className="flex items-center gap-5">
           {[
-            { href: hero.links.linkedin, icon: <LinkedInIcon size={15} />, label: 'LinkedIn', external: true },
-            { href: hero.links.github, icon: <GitHubIcon size={15} />, label: 'GitHub', external: true },
-            { href: `mailto:${hero.links.email}`, icon: <Mail size={15} />, label: 'Email', external: false },
+            {
+              href: hero.links.linkedin,
+              icon: <LinkedInIcon size={15} />,
+              label: "LinkedIn",
+              external: true,
+            },
+            {
+              href: hero.links.github,
+              icon: <GitHubIcon size={15} />,
+              label: "GitHub",
+              external: true,
+            },
+            {
+              href: `mailto:${hero.links.email}`,
+              icon: <Mail size={15} />,
+              label: "Email",
+              external: false,
+            },
           ].map(({ href, icon, label, external }) => (
             <a
               key={label}
               href={href}
-              {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white px-2.5 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-150 hover:shadow-sm relative hover:z-10"
             >
               {icon} {label}
@@ -52,13 +71,13 @@ export default async function Hero() {
           <Image
             src={avatarUrl}
             alt="Manisha Kashyap"
-            width={200}
-            height={200}
-            className="rounded-lg"
+            width={150}
+            height={150}
+            className="rounded-xl"
             priority
           />
         </div>
       )}
     </section>
-  )
+  );
 }
