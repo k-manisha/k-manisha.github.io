@@ -20,7 +20,7 @@ export default async function Hero() {
   const avatarUrl = await getGitHubAvatar()
 
   return (
-    <section className="max-w-3xl mx-auto px-6 pt-14 pb-8 flex flex-row items-center justify-between gap-12">
+    <section className="max-w-2xl mx-auto px-6 pt-14 pb-8 flex flex-row items-center justify-between gap-12">
       <div className="flex-1">
         <h1 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
           {hero.name}
