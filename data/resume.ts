@@ -1,7 +1,7 @@
 export const hero = {
   name: "Manisha Kashyap",
-  tagline: "Software Engineer | Full-Stack & AI",
-  subline: "7 years · React, TypeScript, Vue · Bangalore, India",
+  tagline: "Senior Software Engineer | Full-Stack & AI",
+  subline: "7 years · React, TypeScript, Vue · Micro-Frontends · Bangalore, India",
   links: {
     linkedin: "https://linkedin.com/in/manisha-kashyap",
     github: "https://github.com/k-manisha",
@@ -10,7 +10,7 @@ export const hero = {
 };
 
 export const about =
-  "Frontend engineer with 7 years of experience building enterprise web applications at SAP, Chargebee, and TCS. I specialise in React, TypeScript, and micro-frontend architecture — owning end-to-end frontend delivery as the sole engineer on every team I have been part of. Currently expanding into fullstack development and AI engineering, building toward roles where I can own the full product stack.";
+  "Developer with 7 years of experience building enterprise web applications at SAP, Chargebee, and TCS. I specialise in React, TypeScript, and micro-frontend architecture — owning end-to-end frontend delivery as the sole engineer on every team I have been part of. Currently expanding into fullstack development and AI engineering, building toward roles where I can own the full product stack.";
 
 export type ExperienceItem = {
   company: string;
@@ -40,7 +40,16 @@ export const experience: ExperienceItem[] = [
       "Broke down and analysed frontend stories each release cycle, defining API contracts as the sole frontend decision-maker; conducted ~5 frontend code reviews per sprint within the team.",
       "Guided 3 junior engineers on React architecture, component design, and frontend best practices.",
     ],
-    tech: ["React", "TypeScript", "Module Federation", "React Query", "Zustand", "Vitest", "ESLint", "UI5 Web Components"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Module Federation",
+      "React Query",
+      "Zustand",
+      "Vitest",
+      "ESLint",
+      "UI5 Web Components",
+    ],
   },
   {
     company: "Great Software Laboratory",
@@ -81,15 +90,39 @@ export type SkillCategory = {
 };
 
 export const skills: SkillCategory[] = [
-  { icon: "⌨️", label: "Languages", values: ["TypeScript", "JavaScript", "Java"] },
-  { icon: "🖥️", label: "Frontend", values: ["React", "Vue.js", "Angular", "Next.js"] },
-  { icon: "🎨", label: "Styling", values: ["CSS", "SCSS", "UI5 Web Components"] },
+  {
+    icon: "⌨️",
+    label: "Languages",
+    values: ["TypeScript", "JavaScript", "Java"],
+  },
+  {
+    icon: "🖥️",
+    label: "Frontend",
+    values: ["React", "Vue.js", "Angular", "Next.js"],
+  },
+  {
+    icon: "🎨",
+    label: "Styling",
+    values: ["CSS", "SCSS", "UI5 Web Components"],
+  },
   { icon: "🔄", label: "State", values: ["Zustand", "React Query", "VueX"] },
-  { icon: "🧱", label: "Architecture", values: ["Module Federation", "Component Libraries", "Micro-Frontends"] },
-  { icon: "🧪", label: "Testing", values: ["Vitest", "Jest", "React Testing Library"] },
+  {
+    icon: "🧱",
+    label: "Architecture",
+    values: ["Module Federation", "Component Libraries", "Micro-Frontends"],
+  },
+  {
+    icon: "🧪",
+    label: "Testing",
+    values: ["Vitest", "Jest", "React Testing Library"],
+  },
   { icon: "🔧", label: "Tooling", values: ["ESLint", "Webpack", "Git"] },
   { icon: "⚙️", label: "Backend", values: ["Spring Boot", "REST APIs"] },
-  { icon: "🤖", label: "AI", values: ["Claude Code", "MCP", "Agents", "AI-assisted dev"] },
+  {
+    icon: "🤖",
+    label: "AI",
+    values: ["Claude Code", "MCP", "Agents", "AI-assisted dev"],
+  },
 ];
 
 export type HackathonItem = {
